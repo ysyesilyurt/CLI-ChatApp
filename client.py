@@ -11,9 +11,9 @@ if __name__ == "__main__":
 	if len(sys.argv) == 1:
 		HOST = ("localhost", 10000)
 	elif len(sys.argv) == 2:
-		HOST = ("localhost", sys.argv[1])
+		HOST = ("localhost", int(sys.argv[1]))
 	else:
-		HOST = (sys.argv[2], sys.argv[1])
+		HOST = (sys.argv[2], int(sys.argv[1]))
 
 	main_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
